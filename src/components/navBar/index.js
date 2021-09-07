@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
-//services
-import { useWindowSize } from '../../services/windowSize'
-
 //styles
 import { ContainerNav, BurguerContainer } from './styles'
-import { styles } from './menuStyles'
+import './menuStyle.css'
 
 export function NavBar() {
-  const { width } = useWindowSize()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   function handleCloseMenu(e) {
@@ -33,28 +29,57 @@ export function NavBar() {
           <a href='/'>Contato</a>
         </div>
       </ContainerNav>
-      <BurguerContainer display={width > 650 ? 'none' : 'block'}>
+      <BurguerContainer>
         <Menu
-          styles={styles}
           isOpen={isMenuOpen}
           onStateChange={(state) => handleStateChange(state)}
         >
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             Home
           </a>
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             Serviços
           </a>
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             Como funciona
           </a>
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             Pagamentos
           </a>
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             FAQ
           </a>
-          <a className='menu-item' href='/' onClick={(e) => handleCloseMenu(e)}>
+          <a
+            className='menu-item'
+            id='menu-button'
+            href='/'
+            onClick={(e) => handleCloseMenu(e)}
+          >
             Contato
           </a>
         </Menu>

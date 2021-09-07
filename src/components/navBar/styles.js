@@ -35,5 +35,9 @@ export const ContainerNav = styled.nav`
 `
 
 export const BurguerContainer = styled.div`
-    display: ${props => props.display};
+    display: none;
+
+    @media (max-width: 650px) {
+        display: block;
+    }
 `
